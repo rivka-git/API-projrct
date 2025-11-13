@@ -1,0 +1,7 @@
+# Visual Studio cache files
+.vs/
+# Solution files (optional, but often ignored)
+*.sln
+# Binaries and intermediate files
+[Bb]in/
+[Oo]bj/
