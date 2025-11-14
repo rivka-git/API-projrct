@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="login.js" defer></script>
+    <title>webApi</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+             flex-wrap:wrap;
+        }
+        .existUser {
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            margin: 2vw;
+        }  
+        .newUser {
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            margin: 2vw;
+            display:none;
+        }
+        button {
+            margin-top: 1vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="existUser">
+            <h3>משתמש רשום</h3>
+            <lable id="userName">שם משתמש</lable>
+            <input type="email" id="userName" class="userName" required />
+            <lable id="password">סיסמא</lable>
+            <input type="password" id="password" class="password" required />
+            <button type="button" onClick="signIn()" class="button">שליחה</button>
+            <div class="new" onclick="openSignUp()"> משתמש חדש </div>
+        </form>
+      
+        <form class="newUser">
+            <h3>משתמש חדש</h3>
+            <lable for="userName">שם משתמש</lable>
+            <input type="email" id="newUserName" name="userName" />
+            <lable for="userName">שם פרטי</lable>
+            <input type="text" id="newFirstName" name="firstName" />
+            <lable for="userName">שם משפחה</lable>
+            <input type="text" id="newLastName" name="lastName" />
+            <lable for="password">סיסמא</lable>
+            <input type="password" id="newPassword" name="password" />
+            <progress  value="0" max="4"></progress>
+            <button id="checkPassStrength" type="button" onClick="checkStrength()">check password strength</button>
+            <button type="button" onClick="signUp()" class="button">שליחה</button>
+        </form>
+
+    </div>
+</body>
+</html>
